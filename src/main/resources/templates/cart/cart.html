@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      layout:decorate="~{_layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Giỏ hàng</title>
+    <style>
+        /* Cart Page Specific Styles */
+        .page-header {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee0979 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(238, 9, 121, 0.3);
+        }
+
+        .page-header h2 {
+            margin: 0;
+            font-weight: 700;
+        }
+
+        /* Empty Cart */
+        .empty-cart {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 20px;
+        }
+
+        .empty-cart i {
+            font-size: 5rem;
+            color: #dee2e6;
+            margin-bottom: 1.5rem;
+        }
+
+        .empty-cart h3 {
+            color: #6c757d;
+            margin-bottom: 1rem;
+        }
+
+        .empty-cart .btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border: none;
+            border-radius: 25px;
+            padding: 0.8rem 2rem;
+            color: white;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .empty-cart .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+            color: white;
+        }
+
+        /* Cart Table */
+        .table {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .table thead {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+        }
+
+        .table thead th {
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            padding: 1rem;
+            border: none;
+        }
+
+        .table tbody td {
+            padding: 1.2rem;
+            vertical-align: middle;
+            border-color: #f0f0f0;
+        }
+
+        .table tbody tr {
+            transition: all 0.3s ease;
+        }
+
+        .table tbody tr:hover {
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.05), rgba(238, 9, 121, 0.05));
+        }
+
+        .table img {
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .table img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Product Name */
+        .product-name {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.05rem;
+        }
+
+        /* Price */
+        .product-price {
+            font-weight: 700;
+            color: #e74c3c;
+        }
+
+        .total-price {
+            font-weight: 700;
+            color: #27ae60;
+            font-size: 1.1rem;
+        }
+
+        /* Quantity Input */
+        .quantity-form {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .quantity-input {
+            border-radius: 10px;
+            border: 2px solid #e9ecef;
+            padding: 0.5rem;
+            width: 70px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .quantity-input:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+        }
+
+        /* Update Button */
+        .btn-sm.btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border: none;
+            border-radius: 10px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-sm.btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Delete Button */
+        .btn-danger {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            border: none;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-danger:hover {
+            background: linear-gradient(135deg, #c0392b, #a93226);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+        }
+
+        /* Total Row */
+        .table tfoot {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        }
+
+        .table tfoot td {
+            padding: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .total-label {
+            font-weight: 700;
+            color: #2c3e50;
+            text-transform: uppercase;
+        }
+
+        .total-value {
+            font-weight: 700;
+            font-size: 1.3rem;
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Checkout Card */
+        .checkout-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+
+        .checkout-card .card-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .checkout-card .card-body {
+            padding: 2rem;
+        }
+
+        /* Form Labels */
+        .checkout-card .form-label {
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 0.5rem;
+        }
+
+        .checkout-card .form-control {
+            border-radius: 12px;
+            border: 2px solid #e9ecef;
+            padding: 0.8rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .checkout-card .form-control:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+        }
+
+        /* Action Buttons */
+        .btn-continue {
+            background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+            border: none;
+            border-radius: 25px;
+            padding: 0.8rem 1.5rem;
+            color: white;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-continue:hover {
+            background: linear-gradient(135deg, #7f8c8d, #6c7a7d);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(149, 165, 166, 0.4);
+            color: white;
+        }
+
+        .btn-checkout {
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            border: none;
+            border-radius: 25px;
+            padding: 0.8rem 2rem;
+            color: white;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-checkout:hover {
+            background: linear-gradient(135deg, #219a52, #27ae60);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(39, 174, 96, 0.4);
+        }
+
+        /* Number input arrows hidden */
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+        /* Info Alert */
+        .alert-info {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            border: none;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+<div layout:fragment="content" class="container body-content">
+    <!-- Header -->
+    <div class="page-header d-flex align-items-center">
+        <i class="bi bi-cart3 me-3" style="font-size: 2rem;"></i>
+        <h2 class="mb-0">Giỏ hàng của bạn</h2>
+    </div>
+
+    <!-- Empty Cart -->
+    <div th:if="${#lists.isEmpty(cart)}" class="empty-cart">
+        <i class="bi bi-cart-x"></i>
+        <h3>Giỏ hàng của bạn đang trống</h3>
+        <p class="text-muted mb-4">Hãy thêm sản phẩm vào giỏ hàng để tiếp tục mua sắm</p>
+        <a th:href="@{/products}" class="btn">
+            <i class="bi bi-bag-plus"></i> Tiếp tục mua sắm
+        </a>
+    </div>
+
+    <!-- Cart with Items -->
+    <div th:if="${not #lists.isEmpty(cart)}">
+        <!-- Cart Table -->
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col"><i class="bi bi-box-seam"></i> Sản phẩm</th>
+                        <th scope="col"><i class="bi bi-image"></i> Hình ảnh</th>
+                        <th scope="col"><i class="bi bi-currency-dollar"></i> Đơn giá</th>
+                        <th scope="col"><i class="bi bi-list-ol"></i> Số lượng</th>
+                        <th scope="col"><i class="bi bi-calculator"></i> Thành tiền</th>
+                        <th scope="col"><i class="bi bi-gear"></i> Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="item : ${cart}">
+                        <td class="product-name" th:text="${item.name}"></td>
+                        <td>
+                            <img th:src="@{'/images/' + ${item.image}}" 
+                                 height="70" width="90" class="img-thumbnail" alt="Hình sản phẩm">
+                        </td>
+                        <td class="product-price" th:text="${#numbers.formatDecimal(item.price, 0, 'POINT', 0, 'POINT')} + ' ₫'"></td>
+                        <td>
+                            <form th:action="@{/cart/update/{productId}(productId=${item.productId})}" 
+                                  method="post" class="quantity-form">
+                                <input type="number" name="quantity" class="quantity-input" 
+                                       th:value="${item.quantity}" min="1" max="99">
+                                <button type="submit" class="btn btn-sm btn-primary">
+                                    <i class="bi bi-arrow-repeat"></i>
+                                </button>
+                            </form>
+                        </td>
+                        <td class="total-price" th:text="${#numbers.formatDecimal(item.totalPrice, 0, 'POINT', 0, 'POINT')} + ' ₫'"></td>
+                        <td>
+                            <a th:href="@{/cart/remove/{productId}(productId=${item.productId})}" 
+                               class="btn btn-danger btn-sm"
+                               onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này?')">
+                                <i class="bi bi-trash"></i> Xóa
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4" class="text-end total-label">
+                            <i class="bi bi-receipt"></i> Tổng cộng:
+                        </td>
+                        <td class="total-value" th:text="${#numbers.formatDecimal(totalAmount, 0, 'POINT', 0, 'POINT')} + ' ₫'"></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <!-- Checkout Form -->
+        <div class="checkout-card">
+            <div class="card-header">
+                <i class="bi bi-clipboard-check"></i> Thông tin đặt hàng
+            </div>
+            <div class="card-body">
+                <form th:action="@{/cart/checkout}" method="post">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="customerName" class="form-label">
+                                <i class="bi bi-person"></i> Họ và tên:
+                            </label>
+                            <input type="text" class="form-control" id="customerName" 
+                                   name="customerName" required placeholder="Nhập họ tên của bạn">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="customerEmail" class="form-label">
+                                <i class="bi bi-envelope"></i> Email:
+                            </label>
+                            <input type="email" class="form-control" id="customerEmail" 
+                                   name="customerEmail" required placeholder="Nhập địa chỉ email">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="customerPhone" class="form-label">
+                                <i class="bi bi-phone"></i> Số điện thoại:
+                            </label>
+                            <input type="text" class="form-control" id="customerPhone" 
+                                   name="customerPhone" required placeholder="Nhập số điện thoại">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="shippingAddress" class="form-label">
+                                <i class="bi bi-geo-alt"></i> Địa chỉ giao hàng:
+                            </label>
+                            <input type="text" class="form-control" id="shippingAddress" 
+                                   name="shippingAddress" required placeholder="Nhập địa chỉ giao hàng">
+                        </div>
+                    </div>
+                    <div class="text-end mt-4">
+                        <a th:href="@{/products}" class="btn btn-continue">
+                            <i class="bi bi-arrow-left"></i> Tiếp tục mua sắm
+                        </a>
+                        <button type="submit" class="btn btn-checkout">
+                            <i class="bi bi-credit-card"></i> Đặt hàng
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

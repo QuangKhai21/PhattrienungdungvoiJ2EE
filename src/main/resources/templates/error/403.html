@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      layout:decorate="~{_layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Không có quyền truy cập</title>
+</head>
+<body>
+<div layout:fragment="content" class="container text-center py-5">
+    <div class="alert alert-danger" role="alert">
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" 
+             class="bi bi-shield-exclamation mb-3" viewBox="0 0 16 16">
+            <path d="M2.217 1a.5.5 0 0 0-.553.112l-.596.155C.5 1.5-.182 2.232.182 2.94c.116.71.52 1.45 1.183 2.1l4.22 3.158c.277.207.44.557.44.952v1.79a1.5 1.5 0 0 0 1.5 1.5h5.5a1.5 1.5 0 0 0 1.5-1.5v-1.79c0-.395.163-.745.44-.952l4.22-3.158c.663-.65 1.067-1.39 1.183-2.1.364-.708.318-1.44-.182-2.044l-.595-.155a.5.5 0 0 0-.553-.112C9.45.5 8.158.82 8.003 1.193 7.682.549 6.552.366 5.47.366c-1.082 0-2.212.183-3.253.927z"/>
+            <path d="M8.004 6.088a.5.5 0 0 1 .901.39l.096.146 1.406 2.109a.5.5 0 0 1-.11.706l-1.141.855-1.141-.855a.5.5 0 0 1 .11-.706l1.406-2.109.096-.146A.5.5 0 0 1 8.004 6.088zM8 10.5a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/>
+        </svg>
+        <h2 class="alert-heading">Không có quyền truy cập!</h2>
+        <p class="mb-2">Xin lỗi, bạn không có quyền thực hiện thao tác này.</p>
+        
+        <!-- Show current user's role -->
+        <p class="mb-3">
+            <small class="text-muted">
+                Tài khoản hiện tại: <strong sec:authentication="name">User</strong>
+                <span sec:authorize="hasRole('ADMIN')" class="badge bg-danger ms-1">Quản trị viên</span>
+                <span sec:authorize="hasRole('USER') and !hasRole('ADMIN')" class="badge bg-success ms-1">Người dùng</span>
+            </small>
+        </p>
+        
+        <hr>
+        <div class="d-flex justify-content-center gap-2">
+            <a th:href="@{/products}" class="btn btn-primary">Quay lại trang chủ</a>
+            <form th:action="@{/logout}" method="post" class="d-inline">
+                <button type="submit" class="btn btn-secondary">Đăng xuất</button>
+            </form>
+        </div>
+        
+        <hr>
+        <p class="mb-0"><small>Nếu bạn cần quyền truy cập, vui lòng liên hệ quản trị viên.</small></p>
+    </div>
+</div>
+</body>
+</html>

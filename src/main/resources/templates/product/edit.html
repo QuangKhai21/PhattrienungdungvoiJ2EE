@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      layout:decorate="~{_layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Chỉnh sửa sản phẩm</title>
+    <style>
+        /* Form Page Styles */
+        .page-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(245, 87, 108, 0.3);
+        }
+
+        .page-header h2 {
+            margin: 0;
+            font-weight: 700;
+        }
+
+        /* Form Card */
+        .form-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .form-label i {
+            color: #f5576c;
+        }
+
+        .form-control, .form-select {
+            border-radius: 12px;
+            border: 2px solid #e9ecef;
+            padding: 0.8rem 1rem;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: #f5576c;
+            box-shadow: 0 0 0 0.3rem rgba(245, 87, 108, 0.15);
+        }
+
+        /* Image Section */
+        .image-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .current-image-wrapper {
+            flex: 0 0 auto;
+        }
+
+        .current-image {
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .current-image:hover {
+            transform: scale(1.05);
+        }
+
+        .image-upload-wrapper {
+            flex: 1;
+            min-width: 250px;
+            border: 2px dashed #f5576c;
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(245, 87, 108, 0.05), rgba(240, 147, 251, 0.05));
+            transition: all 0.3s ease;
+        }
+
+        .image-upload-wrapper:hover {
+            border-color: #f093fb;
+            background: linear-gradient(135deg, rgba(245, 87, 108, 0.1), rgba(240, 147, 251, 0.1));
+        }
+
+        .image-upload-wrapper i {
+            font-size: 2.5rem;
+            color: #f5576c;
+            margin-bottom: 0.5rem;
+        }
+
+        .image-note {
+            font-size: 0.85rem;
+            color: #6c757d;
+            margin-top: 0.5rem;
+        }
+
+        /* Buttons */
+        .btn-update {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border: none;
+            border-radius: 25px;
+            padding: 0.8rem 2rem;
+            font-weight: 600;
+            font-size: 1rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-update:hover {
+            background: linear-gradient(135deg, #dd78e3 0%, #e04456 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(245, 87, 108, 0.4);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+            border: none;
+            border-radius: 25px;
+            padding: 0.8rem 2rem;
+            font-weight: 600;
+            font-size: 1rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, #7f8c8d, #6c7a7d);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(149, 165, 166, 0.4);
+            color: white;
+        }
+
+        /* Validation Messages */
+        .alert-warning {
+            background: linear-gradient(135deg, #fff3cd, #ffeeba);
+            border: none;
+            border-radius: 10px;
+            padding: 0.8rem 1rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* Button Group */
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        /* File Input */
+        input[type="file"] {
+            border-radius: 10px;
+        }
+
+        input[type="file"]::file-selector-button {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        input[type="file"]::file-selector-button:hover {
+            background: linear-gradient(135deg, #dd78e3, #e04456);
+        }
+    </style>
+</head>
+<body>
+<div layout:fragment="content" class="container body-content">
+    <!-- Header -->
+    <div class="page-header">
+        <h2><i class="bi bi-pencil-square"></i> Chỉnh sửa sản phẩm</h2>
+    </div>
+    
+    <div class="form-card">
+        <form th:action="@{/products/edit}" th:object="${product}" method="post" class="form" enctype="multipart/form-data">
+            <input type="hidden" th:field="*{id}">
+
+            <div class="form-group">
+                <label for="name" class="form-label">
+                    <i class="bi bi-box-seam"></i> Tên sản phẩm
+                </label>
+                <input class="form-control" type="text" th:field="*{name}" id="name" 
+                       placeholder="Nhập tên sản phẩm">
+                <div class="alert alert-warning" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="price" class="form-label">
+                    <i class="bi bi-currency-dollar"></i> Giá
+                </label>
+                <input class="form-control" type="number" th:field="*{price}" id="price" 
+                       placeholder="Nhập giá sản phẩm" min="0" step="1000">
+                <div class="alert alert-warning" th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="image" class="form-label">
+                    <i class="bi bi-image"></i> Hình ảnh
+                </label>
+                <div class="image-section">
+                    <div class="current-image-wrapper">
+                        <img th:src="@{'/images/' + *{image}}" class="current-image" 
+                             height="120" alt="Hình ảnh hiện tại">
+                        <p class="text-muted mt-2 text-center" style="font-size: 0.8rem;">Hình hiện tại</p>
+                    </div>
+                    <div class="image-upload-wrapper">
+                        <i class="bi bi-cloud-arrow-up"></i>
+                        <p class="text-muted mb-1">Chọn hình mới để thay thế</p>
+                        <p class="image-note">(Bỏ trống nếu giữ nguyên hình cũ)</p>
+                        <input class="form-control" type="file" id="image" name="imageProduct" 
+                               accept="image/png, image/jpeg, image/jpg">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="category" class="form-label">
+                    <i class="bi bi-folder"></i> Danh mục
+                </label>
+                <select th:field="*{category.id}" class="form-select" id="category">
+                    <option th:each="cat : ${categories}"
+                            th:value="${cat.id}"
+                            th:text="${cat.name}"></option>
+                </select>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn btn-update">
+                    <i class="bi bi-check-circle"></i> Cập nhật
+                </button>
+                <a th:href="@{/products}" class="btn btn-secondary">
+                    <i class="bi bi-x-circle"></i> Hủy
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

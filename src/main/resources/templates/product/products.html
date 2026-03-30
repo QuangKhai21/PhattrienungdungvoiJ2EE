@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      layout:decorate="~{_layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh sách sản phẩm</title>
+    <style>
+        /* Products Page Specific Styles */
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .page-header h2 {
+            margin: 0;
+            font-weight: 700;
+        }
+
+        /* Filter Card */
+        .filter-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: none;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control, .form-select {
+            border-radius: 10px;
+            border: 2px solid #e9ecef;
+            padding: 0.6rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+        }
+
+        /* Products Table */
+        .table {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .table thead {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+        }
+
+        .table thead th {
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            padding: 1rem;
+            border: none;
+        }
+
+        .table tbody td {
+            padding: 1rem;
+            vertical-align: middle;
+            border-color: #f0f0f0;
+        }
+
+        .table tbody tr {
+            transition: all 0.3s ease;
+        }
+
+        .table tbody tr:hover {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+            transform: scale(1.01);
+        }
+
+        .table img {
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .table img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Product Name Styling */
+        .product-name {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        /* Price Styling */
+        .product-price {
+            font-weight: 700;
+            color: #e74c3c;
+            font-size: 1.1rem;
+        }
+
+        /* Add to Cart Section */
+        .add-to-cart-section {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .input-group-sm {
+            border-radius: 25px;
+            overflow: hidden;
+        }
+
+        .input-group-sm input {
+            border-radius: 25px 0 0 25px;
+            border: 2px solid #e9ecef;
+            border-right: none;
+        }
+
+        .input-group-sm input:focus {
+            border-color: #667eea;
+        }
+
+        .input-group-sm button {
+            border-radius: 0 25px 25px 0;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border: none;
+            font-weight: 600;
+        }
+
+        .input-group-sm button:hover {
+            background: linear-gradient(135deg, #5568d3, #6a3f91);
+            transform: scale(1.05);
+        }
+
+        /* Action Buttons */
+        .btn-secondary {
+            background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+            border: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, #7f8c8d, #6c7a7d);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(149, 165, 166, 0.4);
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            border: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-danger:hover {
+            background: linear-gradient(135deg, #c0392b, #a93226);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+        }
+
+        /* Primary Button */
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border: none;
+            border-radius: 25px;
+            padding: 0.6rem 1.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #5568d3, #6a3f91);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Cart Button */
+        .btn-outline-primary {
+            border: 2px solid #667eea;
+            border-radius: 25px;
+            color: #667eea;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 0.6rem 1.5rem;
+        }
+
+        .btn-outline-primary:hover {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-color: transparent;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Cart Badge Animation */
+        .position-absolute.top-0.start-100.translate-middle.badge.rounded-pill.bg-danger {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Pagination */
+        .pagination {
+            gap: 0.5rem;
+        }
+
+        .page-link {
+            border-radius: 10px;
+            border: none;
+            padding: 0.6rem 1rem;
+            color: #667eea;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .page-link:hover {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .page-item.active .page-link {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border: none;
+        }
+
+        .page-item.disabled .page-link {
+            background: #e9ecef;
+            color: #adb5bd;
+        }
+
+        /* Category Badge */
+        .category-badge {
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Toast Animation */
+        .toast-animate {
+            animation: slideInRight 0.5s ease-out;
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Empty State */
+        .empty-state {
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .empty-state i {
+            font-size: 4rem;
+            color: #dee2e6;
+        }
+
+        /* Number input arrows hidden */
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+        
+        /* Success Alert Animation */
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .alert-dismissible {
+            border-radius: 15px;
+            border: none;
+            box-shadow: 0 5px 20px rgba(25, 135, 84, 0.3);
+        }
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes slideOut {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(100%); opacity: 0; }
+        }
+    </style>
+    <script>
+    function addToCart(productId) {
+        var qtyInput = document.getElementById('quantity-' + productId);
+        var quantity = qtyInput ? qtyInput.value : 1;
+        var btn = event.target.closest('button');
+        var originalText = btn.innerHTML;
+        btn.disabled = true;
+        btn.innerHTML = '<span class="spinner-border spinner-border-sm"></span>';
+        
+        fetch('/cart/api/add/' + productId, {
+            method: 'POST',
+            credentials: 'include',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: 'quantity=' + quantity
+        })
+        .then(function(r) { return r.json(); })
+        .then(function(d) {
+            updateCartBadge(d.cartCount);
+            showToast('Da them "' + d.productName + '" vao gio hang!', 'success');
+        })
+        .catch(function(e) {
+            showToast('Loi khi them san pham!', 'danger');
+        })
+        .finally(function() {
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+        });
+    }
+
+    function updateCartBadge(count) {
+        var badge = document.getElementById('cartBadge');
+        var countSpan = document.getElementById('cartCount');
+        if (badge && countSpan) {
+            countSpan.textContent = count;
+            badge.style.display = count > 0 ? 'inline-block' : 'none';
+        }
+    }
+
+    function showToast(message, type) {
+        var toast = document.createElement('div');
+        toast.style.cssText = 'position:fixed;top:20px;right:20px;z-index:9999;padding:15px 20px;background:' + (type === 'success' ? '#28a745' : '#dc3545') + ';color:white;border-radius:5px;box-shadow:0 4px 12px rgba(0,0,0,0.15);animation:slideIn 0.3s ease';
+        toast.innerHTML = '<i class="bi bi-' + (type === 'success' ? 'check-circle' : 'exclamation-circle') + ' me-2"></i>' + message;
+        document.body.appendChild(toast);
+        setTimeout(function() {
+            toast.style.animation = 'slideOut 0.3s ease';
+            setTimeout(function() { toast.remove(); }, 300);
+        }, 2500);
+    }
+
+    // Load cart count on load
+    fetch('/cart/api/count', { credentials: 'include' })
+        .then(function(r) { return r.json(); })
+        .then(function(d) { updateCartBadge(d.count); });
+    </script>
+</head>
+<body>
+<div layout:fragment="content" class="container body-content">
+    <!-- Toast Container -->
+    <div id="toastContainer" class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 9999; margin-top: 80px;"></div>
+
+    <!-- Header -->
+    <div class="page-header d-flex justify-content-between align-items-center">
+        <h2><i class="bi bi-box-seam"></i> Danh sách sản phẩm</h2>
+        <a th:href="@{/cart}" class="btn btn-light position-relative">
+            <i class="bi bi-cart3"></i> Giỏ hàng
+            <span id="cartBadge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display: none;">
+                <span id="cartCount">0</span>
+            </span>
+        </a>
+    </div>
+
+    <th:block sec:authorize="hasRole('ADMIN')">
+        <a th:href="@{/products/create}" class="btn btn-primary mb-3">
+            <i class="bi bi-plus-circle"></i> Thêm sản phẩm mới
+        </a>
+    </th:block>
+
+    <!-- Toast Notification -->
+    <div id="addToCartToast" class="alert alert-success position-fixed top-0 end-0 m-3 py-2 px-3 shadow toast-animate"
+         style="display: none; z-index: 1080; max-width: 360px; pointer-events: none; border-radius: 15px;" role="status">
+        <span id="toastMessage">Đã thêm sản phẩm vào giỏ hàng!</span>
+    </div>
+
+    <!-- Search, Filter, and Sort Form -->
+    <form th:action="@{/products}" method="get" class="filter-card">
+        <div class="row g-3">
+            <!-- Search -->
+            <div class="col-md-4">
+                <label for="keyword" class="form-label">
+                    <i class="bi bi-search"></i> Tìm kiếm
+                </label>
+                <input type="text" class="form-control" id="keyword" name="keyword" 
+                       th:value="${keyword}" placeholder="Nhập tên sản phẩm...">
+            </div>
+
+            <!-- Category Filter -->
+            <div class="col-md-3">
+                <label for="categoryId" class="form-label">
+                    <i class="bi bi-folder"></i> Danh mục
+                </label>
+                <select class="form-select" id="categoryId" name="categoryId">
+                    <option value="">Tất cả danh mục</option>
+                    <option th:each="category : ${categories}" 
+                            th:value="${category.id}" 
+                            th:text="${category.name}"
+                            th:selected="${categoryId != null && categoryId == category.id}">
+                    </option>
+                </select>
+            </div>
+
+            <!-- Sort -->
+            <div class="col-md-3">
+                <label for="sortBy" class="form-label">
+                    <i class="bi bi-arrow-down-up"></i> Sắp xếp
+                </label>
+                <div class="input-group">
+                    <select class="form-select" id="sortBy" name="sortBy">
+                        <option value="id" th:selected="${sortBy == 'id'}">Mã SP</option>
+                        <option value="price" th:selected="${sortBy == 'price'}">Giá</option>
+                        <option value="name" th:selected="${sortBy == 'name'}">Tên</option>
+                    </select>
+                    <select class="form-select" name="sortDir" style="max-width: 110px;">
+                        <option value="asc" th:selected="${sortDir == 'asc'}">
+                            <i class="bi bi-arrow-up"></i> ↑
+                        </option>
+                        <option value="desc" th:selected="${sortDir == 'desc'}">
+                            <i class="bi bi-arrow-down"></i> ↓
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Filter Button -->
+            <div class="col-md-2 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary w-100">
+                    <i class="bi bi-funnel"></i> Lọc
+                </button>
+            </div>
+        </div>
+        
+        <!-- Hidden page field -->
+        <input type="hidden" name="page" value="0">
+    </form>
+
+    <!-- Products Table -->
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col"><i class="bi bi-hash"></i> #</th>
+                    <th scope="col"><i class="bi bi-box"></i> Tên sản phẩm</th>
+                    <th scope="col"><i class="bi bi-currency-dollar"></i> Giá</th>
+                    <th scope="col"><i class="bi bi-image"></i> Hình ảnh</th>
+                    <th scope="col"><i class="bi bi-tag"></i> Danh mục</th>
+                    <th scope="col"><i class="bi bi-gear"></i> Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="product : ${productPage.content}">
+                    <th scope="row" th:text="${product.id}"></th>
+                    <td class="product-name" th:text="${product.name}"></td>
+                    <td class="product-price" th:text="${#numbers.formatDecimal(product.price, 0, 'POINT', 0, 'POINT')} + ' ₫'"></td>
+                    <td>
+                        <img height="80" width="100" th:src="@{'/images/' + ${product.image}}" 
+                             alt="Hình sản phẩm" class="img-thumbnail">
+                    </td>
+                    <td>
+                        <span class="category-badge" th:text="${product.category?.name ?: ''}"></span>
+                    </td>
+                    <td>
+                        <div class="add-to-cart-section">
+                            <input type="number" name="quantity" class="form-control"
+                                   value="1" min="1" max="99" id="quantity-__${product.id}__"
+                                   style="width: 70px;">
+                            <button type="button" class="btn btn-success btn-sm add-cart-btn"
+                                    th:data-id="${product.id}"
+                                    th:onclick="'addToCart(' + ${product.id} + ')'">
+                                <i class="bi bi-cart-plus"></i>
+                            </button>
+                        </div>
+
+                        <th:block sec:authorize="hasRole('ADMIN')">
+                            <div class="mt-2">
+                                <a th:href="@{/products/edit/{id}(id=${product.id})}" 
+                                   class="btn btn-secondary btn-sm">
+                                    <i class="bi bi-pencil"></i> Sửa
+                                </a>
+                                <a th:href="@{/products/delete/{id}(id=${product.id})}" 
+                                   class="btn btn-danger btn-sm"
+                                   onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này?')">
+                                    <i class="bi bi-trash"></i> Xóa
+                                </a>
+                            </div>
+                        </th:block>
+                    </td>
+                </tr>
+                <tr th:if="${#lists.isEmpty(productPage.content)}">
+                    <td colspan="6" class="empty-state">
+                        <i class="bi bi-inbox"></i>
+                        <p class="text-muted mt-3">Không tìm thấy sản phẩm nào.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Pagination -->
+    <nav th:if="${totalPages > 1}" aria-label="Phân trang sản phẩm">
+        <ul class="pagination justify-content-center">
+            <!-- Previous -->
+            <li class="page-item" th:classappend="${currentPage == 0} ? 'disabled'">
+                <a class="page-link" 
+                   th:href="@{/products(page=${currentPage - 1}, keyword=${keyword}, categoryId=${categoryId}, sortBy=${sortBy}, sortDir=${sortDir})}">
+                    <i class="bi bi-chevron-left"></i> Trước
+                </a>
+            </li>
+
+            <!-- Page Numbers -->
+            <li class="page-item" th:each="i : ${#numbers.sequence(0, totalPages - 1)}"
+                th:classappend="${currentPage == i} ? 'active'">
+                <a class="page-link" 
+                   th:href="@{/products(page=${i}, keyword=${keyword}, categoryId=${categoryId}, sortBy=${sortBy}, sortDir=${sortDir})}"
+                   th:text="${i + 1}">
+                </a>
+            </li>
+
+            <!-- Next -->
+            <li class="page-item" th:classappend="${currentPage == totalPages - 1} ? 'disabled'">
+                <a class="page-link" 
+                   th:href="@{/products(page=${currentPage + 1}, keyword=${keyword}, categoryId=${categoryId}, sortBy=${sortBy}, sortDir=${sortDir})}">
+                    Sau <i class="bi bi-chevron-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Pagination Info -->
+    <div class="text-center text-muted mt-3" th:if="${totalPages > 0}">
+        <p class="mb-0">
+            <i class="bi bi-info-circle"></i> 
+            Trang <span th:text="${currentPage + 1}"></span> / <span th:text="${totalPages}"></span>
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
