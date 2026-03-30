@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a6a291e4-ef57-405a-8796-c65cb63c6360" name="Changes" comment="bai7">
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI1/BAI1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI1/src/Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI1/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI2/bookapi/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI2/bookapi/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI2/bookapi/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI2/bookapi/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI2/bookapi/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI2/bookapi/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI2/bookapi/src/main/java/com/example/bookapi/BookapiApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI2/bookapi/src/main/java/com/example/bookapi/controller/BookController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI2/bookapi/src/main/java/com/example/bookapi/model/Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI2/bookapi/src/main/java/com/example/bookapi/service/BookService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI2/bookapi/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI2/bookapi/src/test/java/com/example/bookapi/BookapiApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI3/bookapi/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI3/bookapi/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI3/bookapi/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI3/bookapi/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI3/bookapi/src/main/java/com/example/bookapi/BookapiApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI3/bookapi/src/main/java/com/example/bookapi/controller/BookController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI3/bookapi/src/main/java/com/example/bookapi/controller/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI3/bookapi/src/main/java/com/example/bookapi/model/Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI3/bookapi/src/main/java/com/example/bookapi/service/BookService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI3/bookapi/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI3/bookapi/src/main/resources/templates/add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI3/bookapi/src/main/resources/templates/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI3/bookapi/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI3/bookapi/src/test/java/com/example/bookapi/BookapiApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI3/bookapi/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI3/bookapi/target/classes/com/example/bookapi/BookapiApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI3/bookapi/target/classes/com/example/bookapi/controller/BookController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI3/bookapi/target/classes/com/example/bookapi/controller/HomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI3/bookapi/target/classes/com/example/bookapi/model/Book.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI3/bookapi/target/classes/com/example/bookapi/service/BookService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI3/bookapi/target/classes/templates/add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI3/bookapi/target/classes/templates/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI3/bookapi/target/classes/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/src/main/java/bai4_qlsp/Bai4QlspApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/src/main/java/bai4_qlsp/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/src/main/java/bai4_qlsp/controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/src/main/java/bai4_qlsp/model/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/src/main/java/bai4_qlsp/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/src/main/java/bai4_qlsp/service/CategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/src/main/java/bai4_qlsp/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/src/main/resources/static/images/LAPTOP.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/src/main/resources/static/images/tivi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/src/main/resources/static/images/tủ lạnh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/src/main/resources/templates/_layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/src/main/resources/templates/product/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/src/main/resources/templates/product/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/src/main/resources/templates/product/products.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/src/test/java/bai4_qlsp/Bai4QlspApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/target/classes/bai4_qlsp/Bai4QlspApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/target/classes/bai4_qlsp/WebConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/target/classes/bai4_qlsp/controller/ProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/target/classes/bai4_qlsp/model/Category.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/target/classes/bai4_qlsp/model/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/target/classes/bai4_qlsp/service/CategoryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/target/classes/bai4_qlsp/service/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/target/classes/static/images/5916a327-ead1-48ad-8612-7836778d8929_laptop.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/target/classes/static/images/5cd268ca-7830-4431-ada2-2db06915c3c0_tủ lạnh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/target/classes/static/images/759abaa2-b89a-48e5-982e-6b6fbb2e5d1b_LAPTOP.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/target/classes/static/images/8863d81a-701b-429a-8da7-a326150cb5a5_laptop.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/target/classes/static/images/android.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/target/classes/static/images/b713aa70-cbfb-4197-ab79-192e9fc27a22_5916a327-ead1-48ad-8612-7836778d8929_laptop.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/target/classes/static/images/e5e14aff-2ec2-4324-a6af-ebf04bfdc421_LAPTOP.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/target/classes/static/images/laptop.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/target/classes/templates/_layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/target/classes/templates/product/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/target/classes/templates/product/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAI4/target/classes/templates/product/products.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/java/com/example/Bai6/Bai6.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/java/com/example/Bai6/config/DataLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/java/com/example/Bai6/config/GlobalControllerAdvice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/java/com/example/Bai6/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/java/com/example/Bai6/config/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/java/com/example/Bai6/controller/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/java/com/example/Bai6/controller/OrderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/java/com/example/Bai6/controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/java/com/example/Bai6/model/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/java/com/example/Bai6/model/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/java/com/example/Bai6/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/java/com/example/Bai6/model/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/java/com/example/Bai6/repository/AccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/java/com/example/Bai6/repository/CategoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/java/com/example/Bai6/repository/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/java/com/example/Bai6/repository/RoleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/java/com/example/Bai6/service/AccountService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/java/com/example/Bai6/service/CategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/java/com/example/Bai6/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/resources/static/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/resources/templates/_layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/resources/templates/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/resources/templates/order.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/resources/templates/product/add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/resources/templates/product/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/main/resources/templates/product/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/src/test/java/com/example/Bai6/Bai6.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/com/example/bai5_tongvutanphat_2280602321/Bai5Tongvutanphat2280602321Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/com/example/bai5_tongvutanphat_2280602321/config/DataLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/com/example/bai5_tongvutanphat_2280602321/config/GlobalControllerAdvice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/com/example/bai5_tongvutanphat_2280602321/config/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/com/example/bai5_tongvutanphat_2280602321/config/WebConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/com/example/bai5_tongvutanphat_2280602321/controller/HomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/com/example/bai5_tongvutanphat_2280602321/controller/OrderController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/com/example/bai5_tongvutanphat_2280602321/controller/ProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/com/example/bai5_tongvutanphat_2280602321/model/Account.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/com/example/bai5_tongvutanphat_2280602321/model/Category.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/com/example/bai5_tongvutanphat_2280602321/model/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/com/example/bai5_tongvutanphat_2280602321/model/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/com/example/bai5_tongvutanphat_2280602321/repository/AccountRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/com/example/bai5_tongvutanphat_2280602321/repository/CategoryRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/com/example/bai5_tongvutanphat_2280602321/repository/ProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/com/example/bai5_tongvutanphat_2280602321/repository/RoleRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/com/example/bai5_tongvutanphat_2280602321/service/AccountService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/com/example/bai5_tongvutanphat_2280602321/service/CategoryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/com/example/bai5_tongvutanphat_2280602321/service/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/static/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/templates/_layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/templates/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/templates/order.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/templates/product/add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/templates/product/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/classes/templates/product/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/target/test-classes/com/example/bai5_tongvutanphat_2280602321/Bai5Tongvutanphat2280602321ApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/uploads/02c67b6a-7b33-40ac-8d69-e19a3043f605.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/uploads/47ca4e07-3526-428e-960c-ff9fd85dd65e.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/uploads/70269877-d8c4-4762-9bab-e0dbc07b41b6.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/uploads/85083fc5-3b44-435d-bcdd-07b05deece5a.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/uploads/95470403-34ff-4b2a-b0cb-37fa9cd01823.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/uploads/98b012c3-94d3-49df-a7eb-98f4ef430b91.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/uploads/c6388e77-bf1a-48c6-ae0d-fdc6deb36e92.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/uploads/f0100290-8e23-40dc-91e6-371cecec37f5.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai6/uploads/f4ff40ef-4f0b-4ad8-82ae-5ce2ce214dc3.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/src/main/java/bai4_qlsp/Bai4QlspApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/src/main/java/bai4_qlsp/DataInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/src/main/java/bai4_qlsp/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/src/main/java/bai4_qlsp/controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/src/main/java/bai4_qlsp/model/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/src/main/java/bai4_qlsp/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/src/main/java/bai4_qlsp/repository/CategoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/src/main/java/bai4_qlsp/repository/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/src/main/java/bai4_qlsp/service/CategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/src/main/java/bai4_qlsp/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/src/main/resources/static/images/-1644423641924895745680 (1).webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/src/main/resources/static/images/-1644423641924895745680.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/src/main/resources/static/images/2-590.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/src/main/resources/static/images/5916a327-ead1-48ad-8612-7836778d8929_laptop.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/src/main/resources/static/images/8863d81a-701b-429a-8da7-a326150cb5a5_laptop.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/src/main/resources/static/images/android.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/src/main/resources/static/images/b713aa70-cbfb-4197-ab79-192e9fc27a22_5916a327-ead1-48ad-8612-7836778d8929_laptop.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/src/main/resources/static/images/hinh-nen-dong-4k-hinh-nen-3d-hd-cho-dien-thoai-android-01-11-2021-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/src/main/resources/static/images/laptop.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/src/main/resources/static/images/thinkcentre-m70a-1696926798823561554145.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/src/main/resources/templates/_layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/src/main/resources/templates/product/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/src/main/resources/templates/product/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/src/main/resources/templates/product/products.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/src/test/java/bai4_qlsp/Bai4QlspApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/target/classes/bai4_qlsp/Bai4QlspApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/target/classes/bai4_qlsp/DataInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/target/classes/bai4_qlsp/WebConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/target/classes/bai4_qlsp/controller/ProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/target/classes/bai4_qlsp/model/Category.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/target/classes/bai4_qlsp/model/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/target/classes/bai4_qlsp/repository/CategoryRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/target/classes/bai4_qlsp/repository/ProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/target/classes/bai4_qlsp/service/CategoryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/target/classes/bai4_qlsp/service/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/target/classes/static/images/21cc64b4-b44b-4ee7-890e-b4031b5961f6_laptop.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/target/classes/static/images/3181049a-2708-4e57-b8bd-cf41d923d7c1_b713aa70-cbfb-4197-ab79-192e9fc27a22_5916a327-ead1-48ad-8612-7836778d8929_laptop.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/target/classes/static/images/5916a327-ead1-48ad-8612-7836778d8929_laptop.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/target/classes/static/images/8863d81a-701b-429a-8da7-a326150cb5a5_laptop.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/target/classes/static/images/95d0cb3e-0a54-489e-844d-0724b11526b4_hinh-nen-dong-4k-hinh-nen-3d-hd-cho-dien-thoai-android-01-11-2021-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/target/classes/static/images/9952b18a-649f-4965-889e-011bb9697d1d_android.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/target/classes/static/images/9afe55eb-7f9a-4c10-a153-cb53d465cb72_android.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/target/classes/static/images/a4494ac9-4099-4aa7-9240-e5c33df315ab_2-590.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/target/classes/static/images/android.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/target/classes/static/images/b713aa70-cbfb-4197-ab79-192e9fc27a22_5916a327-ead1-48ad-8612-7836778d8929_laptop.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/target/classes/static/images/laptop.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/target/classes/templates/_layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/target/classes/templates/product/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/target/classes/templates/product/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab05-Qlsp/target/classes/templates/product/products.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhattrienungdungvoiJ2EE.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PhattrienungdungvoiJ2EE/Book.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PhattrienungdungvoiJ2EE/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/Bai4QlspApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/DataInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/controller/CartController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/controller/ErrorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/controller/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/controller/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/model/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/model/CartItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/model/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/model/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/model/OrderDetail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/model/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/repository/AccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/repository/CategoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/repository/OrderDetailRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/repository/OrderRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/repository/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/repository/RoleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/service/AccountService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/service/CartService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/service/CategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/service/OrderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bai4_qlsp/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/-1644423641924895745680 (1).webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/-1644423641924895745680.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/2-590.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/5916a327-ead1-48ad-8612-7836778d8929_laptop.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/8863d81a-701b-429a-8da7-a326150cb5a5_laptop.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/android.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/b713aa70-cbfb-4197-ab79-192e9fc27a22_5916a327-ead1-48ad-8612-7836778d8929_laptop.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/hinh-nen-dong-4k-hinh-nen-3d-hd-cho-dien-thoai-android-01-11-2021-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/laptop.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/thinkcentre-m70a-1696926798823561554145.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/_layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cart/cart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cart/order-success.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/403.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product/products.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bai4_qlsp/Bai4QlspApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;QuangKhai21&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/QuangKhai21/PhattrienungdungvoiJ2EE.git",
+    "accountId": "f9b515bf-3aa5-4a34-97a9-fe98e2395ba1"
+  }
+}]]></component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="39K8QYNcezDWfdOgRuS25u4PHA6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Bai4QlspApplication.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.Bai4QlspApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Downloads/bai7",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\bai4_qlsp\src\main\java\bai4_qlsp" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Bai4QlspApplication">
+    <configuration name="Bai4QlspApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bai4_qlsp.Bai4QlspApplication" />
+      <module name="Bai7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bai4_qlsp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Bai4QlspApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Bai7" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="bai4_qlsp.Bai4QlspApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Bai4QlspApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a6a291e4-ef57-405a-8796-c65cb63c6360" name="Changes" comment="" />
+      <created>1770433386265</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1770433386265</updated>
+      <workItem from="1770433387686" duration="3674000" />
+      <workItem from="1770440482287" duration="84000" />
+      <workItem from="1772508804102" duration="241000" />
+    </task>
+    <task id="LOCAL-00001" summary="bai7">
+      <option name="closed" value="true" />
+      <created>1774884251515</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1774884251515</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.security:spring-security-core" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.validation:jakarta.validation-api" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate.validator:hibernate-validator" />
+    <option featureType="dependencySupport" implementationName="java:org.thymeleaf:thymeleaf" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+    <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="bai7" />
+    <option name="LAST_COMMIT_MESSAGE" value="bai7" />
+  </component>
+</project>
